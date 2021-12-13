@@ -1,0 +1,182 @@
+/*font-family: 'Open Sans', sans-serif;
+
+font-family: 'Raleway', sans-serif;
+*/
+.contact {
+    padding: 1.5rem 1rem;
+    background-color: #FFFFFF;
+
+    .contact__wrapper {
+        h2 {
+            display: block;
+            font-family: 'Raleway', sans-serif;
+            font-size: 40px;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            display: block;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+
+        div {
+            p {
+                position: relative;
+                color: #A5A5A5;
+                margin-bottom: 1rem;
+                margin-left: 30px;
+            }
+
+            p:first-of-type::before {
+                content: url(../images/Mail.svg);
+                line-height: 100%;
+                font-size: 16px;
+                margin-right: 5px;
+                position: absolute;
+                left: -30px;
+                transform: translateY(-20%);
+            }
+
+            p:last-of-type::before {
+                content: url(../images/Phone.svg);
+                line-height: 100%;
+                font-size: 16px;
+                margin-right: 5px;
+                position: absolute;
+                left: -30px;
+                transform: translateY(-20%);
+            }
+        }
+    }
+
+    form {
+        @include flexcolumn();
+        justify-content: center;
+        align-items: flex-start;
+
+        label {
+            display: block;
+            color: $color_blue;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3.28px;
+            text-transform: uppercase;
+            padding-top: 25px;
+        }
+
+        input {
+            padding-top: 20px;
+            border: none;
+            display: block;
+            width: 100%;
+            border-bottom: 2px solid $color_gray;
+        }
+
+        .checkbox {
+            cursor: pointer;
+            display: flex;
+            padding-top: 20px;
+            width: 100%;
+            margin-top: 20px;
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+
+            span {
+                height: 20px;
+                flex-shrink: 0;
+                flex-basis: 20px;
+                border: 2px solid $color_gray;
+                cursor: pointer;
+                margin-right: 15px;
+            }
+
+            input:checked+span {
+                background-image: url(../images/Checkmark.svg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            p {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                letter-spacing: 0px;
+                text-transform: none;
+                color: #707070;
+                font-weight: normal;
+            }
+
+
+        }
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: block;
+            font-family: "Open Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 15px 70px;
+            text-decoration: none;
+            background-color: $color_blue;
+            box-shadow: 5px 10px 14px #07ACE629;
+            border-radius: 35px;
+            color: white;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        display: flex;
+        padding-top: 30px;
+        justify-content: center;
+        align-items: flex-start;
+
+        .contact__wrapper {
+            @include flexcolumn();
+            justify-content: center;
+            width: 30%;
+
+            h2 {
+                font-size: 49px;
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-weight: 400;
+            }
+
+            div {
+                display: flex;
+
+                p {
+                    margin-right: 20px;
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        .form__wrapper {
+            @include flexcolumn();
+            justify-content: center;
+            align-items: flex-start;
+            width: 30%;
+        }
+    }
+}

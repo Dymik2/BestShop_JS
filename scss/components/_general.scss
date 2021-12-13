@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1352px;
+}
+
+
+body {
+
+    align-items: center;
+    overflow-x: hidden;
+
+    @media (min-width: 1024px) {
+        @include flexcolumn();
+    }
+}
+
+main {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    background-color: #F7F7F7;
+
+}

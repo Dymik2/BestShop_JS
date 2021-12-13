@@ -1,0 +1,111 @@
+/*font-family: 'Open Sans', sans-serif;
+
+font-family: 'Raleway', sans-serif;
+*/
+
+.statistic {
+    padding: 2rem 1.2rem;
+    width: 100vw;
+    background-color: white;
+
+    h2 {
+        display: inline-block;
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        text-align: center;
+        color: #000000;
+        padding-bottom: 1.8rem;
+    }
+
+    .statistic_wrapper {
+        width: 100%;
+    }
+
+    article {
+        @include flexcolumn();
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 1.5rem 0;
+
+        .picture {
+            position: relative;
+            @include flexcolumn();
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-bottom: 0.7rem;
+        }
+
+        &:first-of-type .picture {
+            background-color: $color_red;
+        }
+
+        &:nth-of-type(2) .picture {
+            background-color: $color_blue;
+        }
+
+        &:nth-of-type(3) .picture {
+            background-color: $color_green;
+        }
+
+        img {
+            position: absolute;
+            left: 50%;
+        }
+
+        span {
+            display: block;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 6px;
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+            color: #000000;
+            padding-bottom: .5rem;
+        }
+
+        p {
+            display: block;
+            font-family: 'Raleway', sans-serif;
+            font-size: 17px;
+            color: $color_gray;
+            text-align: center;
+            letter-spacing: 0px;
+        }
+    }
+
+    @media (min-width: 500px) {
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include flexcolumn();
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        h2 {
+            font-size: 36px;
+        }
+
+        .statistic_wrapper {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+
+            article {
+                width: 33%;
+                height: 100%;
+            }
+        }
+    }
+}
